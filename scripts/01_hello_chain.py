@@ -13,6 +13,7 @@ from langchain_core.globals import set_debug
 set_debug(True)
 
 load_dotenv()
+print(os.getenv("LANGSMITH_API_KEY", "NOT SET"))
 
 MODEL = os.getenv("OLLAMA_MODEL", "qwen3.5:2b")
 BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
